@@ -26,10 +26,6 @@ body {
 }
 
 /* ELEMENTS */
-h1, h3 {
-  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.15)
-}
-
 h1 {
   margin-top: -2px;
 }
@@ -58,6 +54,10 @@ ul {
   height: 250px;
 }
 
+.burger-box h1 {
+  font-family: 'Pacifico', cursive;
+}
+
 .bun-top {
   height: 30%;
   width: 80%;
@@ -74,8 +74,13 @@ ul {
   border-radius: 0 0 30px 30px; 
 }
 
+/* CONTACT AREA STYLES */
 .contact {
   background: #f9feff;
+}
+
+.contact h1 {
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.15)
 }
 
 /* FORM STYLES */
