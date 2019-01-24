@@ -56,6 +56,18 @@ ul {
 
 .burger-box h1 {
   font-family: 'Pacifico', cursive;
+  color: #136ebe;
+  opacity: 0;
+  animation-name: burger-box-h1;
+  animation-duration: 5s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+  /* BURGER BOX H1 ANIMATION */
+@keyframes burger-box-h1 {
+  0% {opacity: 0}
+  100% {opacity: 1}
 }
 
 .bun-top {
@@ -64,6 +76,18 @@ ul {
   background: linear-gradient(0deg, #bc581e 30%, #e27b36);
   border-radius: 75px 75px 5px 5px;
   box-shadow: inset -15px 0 #c15711;
+  animation-name: bun-top;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+}
+
+  /* BUN-TOP ANIMATION */
+@keyframes bun-top {
+  0% {background: #bc581e; border-radius: 99px 99px 5px 5px;}
+  25% {background: #ca5b1a; border-radius: 95px 95px  5px 5px;}
+  50% {background: #d45c17; border-radius: 90px 90px 5px 5px;}
+  75% {background: #e25f13; border-radius: 85px 85px 5px 5px;}
+  100% {background: #e27b36; border-radius: 80px 80px 5px 5px;}
 }
 
 .bun-bottom {
@@ -71,7 +95,7 @@ ul {
   width: 80%;
   background: linear-gradient(#f08e4a, #e27b36);
   box-shadow: inset -15px 0 #c15711;
-  border-radius: 0 0 30px 30px; 
+  border-radius: 0 0 30px 30px;
 }
 
 /* CONTACT AREA STYLES */
