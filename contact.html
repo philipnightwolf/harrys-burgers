@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Harry's Burgers</title>
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>  
+  <div class="container">
+    <div class="wrapper">
+
+      <div class="company-info">
+        <div class="burger-box">
+          <div class="bun-top"></div>
+            <h1>Harry's Burgers</h1>
+              <ul>
+                <li><i class="fa fa-road"></i> Ketchum, Idaho</li>
+                <li><i class="fa fa-phone"></i> (800) 123-4321</li>
+                <li><i class="fa fa-envelope"></i> harry@harrys.com</li>
+              </ul>
+          <div class="bun-bottom"></div>
+        </div><!-- End of burger-box -->
+      </div><!-- End of company-info -->
+
+      <div class="contact">
+        <h1>Contact Us</h1>        
+        <p>
+          Please use the contact form below to send us a message and one of our world famous burger chefs will respond to you within 24 hours! Order up!
+        </p>
+        <div class="alert">Your message has been sent</div>
+
+        <form id="contact-form">
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" required>
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" required>
+          <label for="phone">Phone Number (optional)</label>
+          <input type="text" name="phone" id="phone" >
+          <label for="message">Message</label>
+          <textarea name="message" rows="5" id="message"></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </div><!-- End of Contact -->
+    </div><!-- End of Wrapper -->
+  </div><!-- End of Container -->
+  
+  <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
