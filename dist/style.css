@@ -2,6 +2,7 @@
   box-sizing: border-box;
 }
 
+/* GLOBAL STYLES */
 body {
   background: #75ade3; 
   color: #09335e;
@@ -9,27 +10,68 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding: 1em;
 }
-
 .container {
   max-width: 1170px;
   margin-left: auto;
   margin-right: auto;
   padding: 1em;
+  position: relative;
 }
-
 .wrapper {
   box-shadow: 0 0 20px 0 rgba(72, 94, 116, 0.7);
 }
-
 .wrapper > *{
   padding: 1em;
+}
+
+/* NAVIGATION */
+.main-nav ul {
+  display: grid;
+  grid-gap: 20px;
+  padding: 0;
+  list-style: none;
+  grid-template-columns: repeat(2, 0fr);
+}
+.main-nav a {
+  background: #385b79;
+  display: block;
+  text-decoration: none;
+  padding: 0.8rem;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  /* box-shadow: ; */
+  width: 110px;
+  /* font-family: 'Source Sans Pro'; */
+  font-weight: 700;
+}
+.main-nav a {
+  position: relative;
+}
+.container .main-nav a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  max-width: 100px;
+  height: 5px;
+  bottom: 8px;
+  left: -50%;
+  background-color: #b1fdd7;
+  opacity: 0;
+  transform: scaleX(0);
+  transition: all .3s ease-in-out 0s;
+}
+.container .main-nav a:hover:before {
+  opacity: 1;
+  left: 0;
+  transform: scaleX(0.8);
 }
 
 /* ELEMENTS */
 h1 {
   margin-top: -2px;
 }
-
 ul {
   list-style: none;
   margin-top: -20px;
@@ -40,7 +82,6 @@ ul {
   background: #c9e6ff;
   padding-bottom: 20%;
 }
-
 .company-info h3, company-info ul {
   text-align: center;
   margin: 1rem 0 1rem 0;
@@ -50,8 +91,8 @@ ul {
 /* BURGER BOX */
 .burger-box {
   width: 300px;
-  margin: auto;
   height: 250px;
+  margin-left: 0 25px;
 }
 
 .burger-box h1 {
@@ -61,7 +102,7 @@ ul {
   animation-name: burger-box-h1;
   animation-duration: 5s;
   animation-delay: 1s;
-  animation-fill-mode: forwards;
+  animation-fill-mode: forwards;  
 }
 
   /* BURGER BOX H1 ANIMATION */
@@ -155,12 +196,10 @@ button:hover, .contact button:focus {
   .wrapper {
     display: grid;
     grid-template-columns: 1fr 2fr;
-  }
-  
+  }  
   .wrapper > *{
     padding: 2em;
   }
-
   .company-info h3, .company-info ul {
     text-align: left;
   }
