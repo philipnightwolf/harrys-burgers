@@ -1,0 +1,36 @@
+{
+  "hamburgers": [
+    {
+      "description": "The Cherry Bomb burger tastes like a sundae with a cherry on top. It was created to satisfy the sugary lovers.",
+      "name": "Cherry Bomb"
+    },
+    {
+      "description": "Hickory Dicory Dock the hamburger has hit the spot. Drizzled with hickory sauce this burger will leave your senses in awe.",
+      "name": "The Hickory Dickory"
+    },
+    {
+      "description": "Do you dream of the stars at night? The Astro Burger is the perfect astroid you're taste buds have been dying to taste.",
+      "name": "Astro Burger"
+    },
+    {
+      "description": "Is it Tuesday afternoon and raining yet? Come grab a bite with your Crazy Tuesday burger.",
+      "name": "Crazy Tuesday Burger"
+    },
+    {
+      "description": "Aww! now you're ready to indulge. You want to get ready to sleep in all weekend and get loaded on the Fat Friday!",
+      "name": "Fat Friday Burger"
+    },
+    {
+      "description": "So Fat Friday has settled in and now you're looking for a sprucer. Our special tamale tomato sauce will awaken you from your slumber.",
+      "name": "Sleepy Sunday Burger"
+    },
+    {
+      "description": "This one is slopped with a heavy amount of our name brand hickory sauce and tends to drip all over you so we named it 'Sloppy Bob.'",
+      "name": "The Sloppy Bob"
+    },
+    {
+      "description": "The Pepperoni Burg was created to satisfy our fans who are craving a pizza at the same time as a burger. Filled with mozzerrella and cheddar and loaded with pepperoni.",
+      "name": "Pepperoni Burg"
+    }
+  ]
+}
