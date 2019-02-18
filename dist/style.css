@@ -1,10 +1,10 @@
-*{
+* {
   box-sizing: border-box;
 }
 
 /* GLOBAL STYLES */
 body {
-  background: #75ade3; 
+  background: #75ade3;
   color: #09335e;
   line-height: 1.6;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -20,7 +20,7 @@ body {
 .wrapper {
   box-shadow: 0 0 20px 0 rgba(72, 94, 116, 0.7);
 }
-.wrapper > *{
+.wrapper > * {
   padding: 1em;
 }
 
@@ -50,7 +50,7 @@ body {
   position: relative;
 }
 .container .main-nav a:before {
-  content: "";
+  content: '';
   position: absolute;
   width: 100%;
   max-width: 100px;
@@ -60,7 +60,7 @@ body {
   background-color: #b1fdd7;
   opacity: 0;
   transform: scaleX(0);
-  transition: all .3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
 }
 .container .main-nav a:hover:before {
   opacity: 1;
@@ -74,43 +74,47 @@ h1 {
 }
 ul {
   list-style: none;
-  margin-top: -20px;
-  margin-bottom: 10px;
-}
-
-.company-info {
-  background: #c9e6ff;
-  padding-bottom: 20%;
-}
-.company-info h3, company-info ul {
-  text-align: center;
-  margin: 1rem 0 1rem 0;
-  padding: 0;
+  margin-top: 0;
+  margin-bottom: 1rem;
 }
 
 /* BURGER BOX */
 .burger-box {
-  width: 300px;
+  width: 250px;
   height: 250px;
-  margin-left: 0 25px;
+  margin-top: 15px;
+  margin-left: 25px;
 }
-
 .burger-box h1 {
   font-family: 'Pacifico', cursive;
-  color: #136ebe;
-  opacity: 0;
+  font-size: 28px;
+  margin-top: 4px;
+  margin-bottom: 0;
+  color: #133350;
+  opacity: 0.1;
   animation-name: burger-box-h1;
   animation-duration: 5s;
   animation-delay: 1s;
-  animation-fill-mode: forwards;  
+  animation-fill-mode: forwards;
+}
+.burger-box ul {
+  padding-top: 0.3rem;
+  margin-bottom: 0.5rem;
+}
+.company-info {
+  background: #c9e6ff;
+  padding-bottom: 10%;
 }
 
-  /* BURGER BOX H1 ANIMATION */
+/* BURGER BOX H1 ANIMATION */
 @keyframes burger-box-h1 {
-  0% {opacity: 0}
-  100% {opacity: 1}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-
 .bun-top {
   height: 30%;
   width: 80%;
@@ -121,16 +125,29 @@ ul {
   animation-duration: 5s;
   animation-timing-function: ease-in-out;
 }
-
-  /* BUN-TOP ANIMATION */
+/* BUN-TOP ANIMATION */
 @keyframes bun-top {
-  0% {background: #bc581e; border-radius: 99px 99px 5px 5px;}
-  25% {background: #ca5b1a; border-radius: 95px 95px  5px 5px;}
-  50% {background: #d45c17; border-radius: 90px 90px 5px 5px;}
-  75% {background: #e25f13; border-radius: 85px 85px 5px 5px;}
-  100% {background: #e27b36; border-radius: 80px 80px 5px 5px;}
+  0% {
+    background: #bc581e;
+    border-radius: 99px 99px 5px 5px;
+  }
+  25% {
+    background: #ca5b1a;
+    border-radius: 95px 95px 5px 5px;
+  }
+  50% {
+    background: #d45c17;
+    border-radius: 90px 90px 5px 5px;
+  }
+  75% {
+    background: #e25f13;
+    border-radius: 85px 85px 5px 5px;
+  }
+  100% {
+    background: #e27b36;
+    border-radius: 80px 80px 5px 5px;
+  }
 }
-
 .bun-bottom {
   height: 15%;
   width: 80%;
@@ -145,7 +162,7 @@ ul {
 }
 
 .contact h1 {
-  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.15)
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.15);
 }
 
 /* FORM STYLES */
@@ -155,7 +172,8 @@ form {
   grid-gap: 20px;
 }
 
-input, textarea {
+input,
+textarea {
   margin-top: -20px;
   width: 100%;
   padding: 1em;
@@ -163,9 +181,9 @@ input, textarea {
 }
 
 button {
-  background: #136ebe;  
+  background: #136ebe;
   text-transform: uppercase;
-  color: white;   
+  color: white;
   font-size: 1.1em;
   padding: 1em;
   border: none;
@@ -174,8 +192,9 @@ button {
   width: 8em;
 }
 
-button:hover, .contact button:focus {
-  background: #4a9bec; 
+button:hover,
+.contact button:focus {
+  background: #4a9bec;
   color: #fff;
   outline: 0;
   transition: background-color 2s ease-out;
@@ -192,15 +211,33 @@ button:hover, .contact button:focus {
 }
 
 /* LARGE SCREENS */
-@media(min-width:700px) {
+@media (min-width: 700px) {
   .wrapper {
     display: grid;
     grid-template-columns: 1fr 2fr;
-  }  
-  .wrapper > *{
+  }
+  .wrapper > * {
     padding: 2em;
   }
-  .company-info h3, .company-info ul {
+  .company-info h3,
+  .company-info ul {
     text-align: left;
+  }
+}
+@media (max-width: 320px) {
+  .burger-box {
+    /* padding-right: 45px; */
+    width: 200px;
+    height: 200px;
+  }
+  .burger-box h1 {
+    font-size: 22px;
+  }
+  .company-info ul {
+    padding: 10px 0 0 20px;
+    font-size: 13px;
+  }
+  h2 {
+    font-size: 16px;
   }
 }
