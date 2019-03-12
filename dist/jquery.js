@@ -8,8 +8,9 @@
       dataType: 'json'
     }).done(function(data) {
       $.each(data.hamburgers, function(key, val) {
-        $('.info-menu')
-          .append('<li>' + val.name + '</li>')
+        $('.info-menu').append(
+          '<p class="dotted">' + val.name + ' ' + '|' + ' ' + val.description + '</p>'
+        );
       }) // end each
     }) // end ajax
   }) // end click event

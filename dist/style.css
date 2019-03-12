@@ -4,6 +4,7 @@
 
 /* GLOBAL STYLES */
 body {
+  display: grid;
   background: #75ade3;
   color: #09335e;
   line-height: 1.6;
@@ -23,40 +24,54 @@ body {
 .wrapper > * {
   padding: 1em;
 }
+.hamburger {
+  max-width: 100%;
+  background: #f9feff;
+  background: url(img/hamburger.jpg);
+  background-position: center;
+  background-size: cover;
+  color: white;
+}
+.hamburger h1 {
+  text-transform: uppercase;
+  font-size: 40px;
+  margin-bottom: 0;
+}
+.hamburger p {
+  font-size: 30px;
+  margin-top: 0;
+  font-style: italic;
+}
 
 /* NAVIGATION */
 .main-nav ul {
   display: grid;
-  grid-gap: 20px;
-  padding: 0;
+  grid-gap: 10px;
   list-style: none;
-  grid-template-columns: repeat(2, 0fr);
-}
-.main-nav a {
-  background: #385b79;
-  display: block;
-  text-decoration: none;
-  padding: 0.8rem;
-  text-align: center;
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 1.1rem;
-  /* box-shadow: ; */
-  width: 110px;
-  /* font-family: 'Source Sans Pro'; */
-  font-weight: 700;
+  padding: 0;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 }
 .main-nav a {
   position: relative;
+  background: #385b79;
+  display: block;
+  text-decoration: none;
+  padding: 12px;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: .1em;
 }
 .container .main-nav a:before {
   content: '';
   position: absolute;
   width: 100%;
-  max-width: 100px;
+  max-width: 300px;
   height: 5px;
   bottom: 8px;
-  left: -50%;
+  left: -25%;
   background-color: #b1fdd7;
   opacity: 0;
   transform: scaleX(0);
@@ -76,6 +91,9 @@ ul {
   list-style: none;
   margin-top: 0;
   margin-bottom: 1rem;
+}
+p.dotted {
+  border-bottom: 1px dotted #f08e4a;
 }
 
 /* BURGER BOX */
@@ -160,9 +178,18 @@ ul {
 .contact {
   background: #f9feff;
 }
-
 .contact h1 {
   text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.15);
+}
+.contact p a {
+  color: #000;
+  border-bottom: 5px solid #f08e4a;
+  text-decoration: none;
+}
+.contact p a:hover {
+  font-weight: 400;
+  transition: background .2s;
+  background: #f08e4a;
 }
 
 /* FORM STYLES */
@@ -171,7 +198,6 @@ form {
   grid-template-columns: 1fr;
   grid-gap: 20px;
 }
-
 input,
 textarea {
   margin-top: -20px;
@@ -179,7 +205,6 @@ textarea {
   padding: 1em;
   border: 1px solid #4679a6;
 }
-
 button {
   background: #136ebe;
   text-transform: uppercase;
@@ -191,15 +216,14 @@ button {
   border-radius: 2.5em;
   width: 8em;
 }
-
 button:hover,
 .contact button:focus {
   background: #4a9bec;
   color: #fff;
   outline: 0;
   transition: background-color 2s ease-out;
+  cursor: pointer;
 }
-
 .alert {
   text-align: center;
   padding: 10px;
@@ -208,6 +232,20 @@ button:hover,
   margin: 5px 0 10px 0;
   display: none;
   font-weight: 500;
+}
+
+/* FOOTER */
+.footer {
+  background: #385b79;
+  color: white; 
+  grid-row-start: 2;
+  grid-row-end: 3;
+  text-align: center;
+  justify-content: center;
+  align-items: center;  
+  padding: 10px;
+  margin-top: 25px;
+  margin-bottom: -15px;
 }
 
 /* LARGE SCREENS */
@@ -224,6 +262,8 @@ button:hover,
     text-align: left;
   }
 }
+
+/* SMALL SCREENS */
 @media (max-width: 320px) {
   .burger-box {
     /* padding-right: 45px; */
