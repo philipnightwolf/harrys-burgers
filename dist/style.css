@@ -42,6 +42,31 @@ body {
   margin-top: 0;
   font-style: italic;
 }
+.open {
+  background-color: white;
+  color: #c5090e;
+  font-style: italic;
+  text-align: center;
+  font-size: 18px;
+}
+
+.coupons {
+  display: grid;
+  grid-gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); 
+  background-color: #dceeff;
+  color: #444;
+}
+.coupon {
+  background-color: #fdffe7;
+  color: #34a62f;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 150%;
+  border: 2px dashed #34a62f;
+  font-size: 15px;
+  text-align: center;
+}
 
 /* NAVIGATION */
 .main-nav ul {
