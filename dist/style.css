@@ -4,16 +4,18 @@
 
 /* Color Variables */
 :root {
-  --body-bgColor: #75ade3;
-  --h1Color: #09335e;
+  --primeColor: #222222;
   --tomatoRed: #ff6347;
-  --greyTxt: #444;;
+  --greyTxt: #444;
+  --lettuce: #34a62f;
+  --bunLight: #f08e4a;
+  --offWhite: #f3f4f7;
 }
 
 /* GLOBAL STYLES */
 body {
   display: grid;
-  background: var(--body-bgColor);  
+  background: var(--primeColor);  
   line-height: 1.6;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding: 1em;
@@ -27,7 +29,7 @@ body {
   position: relative;
 }
 .wrapper {
-  box-shadow: 0 0 20px 0 rgba(72, 94, 116, 0.7);
+  box-shadow: 0 0 20px 0 #b1afaf;
 }
 .wrapper > * {
   padding: 1em;
@@ -38,7 +40,7 @@ h1 {
   margin-top: -2px;  
 }
 h1, h2 {
-  color: var(--h1Color);
+  color: var(--primeColor);
 }
 ul {
   list-style: none;
@@ -59,12 +61,12 @@ p.dotted {
 }
 .main-nav a {
   position: relative;
-  background: #385b79;
-  display: block;
-  text-decoration: none;
-  padding: 12px;
-  text-align: center;
+  background: var(--bunLight);
   color: #fff;
+  text-decoration: none;  
+  display: block;  
+  padding: 12px;
+  text-align: center;  
   text-transform: uppercase;
   font-size: 20px;
   font-weight: 300;
@@ -74,19 +76,18 @@ p.dotted {
   content: '';
   position: absolute;
   width: 100%;
-  max-width: 300px;
   height: 5px;
   bottom: 8px;
   left: -25%;
-  background-color: #b1fdd7;
-  opacity: 0;
-  transform: scaleX(0);
+  background-color: var(--tomatoRed);
+  visibility: hidden;
+  transform: scaleX(0);  
   transition: all 0.3s ease-in-out 0s;
 }
 .container .main-nav a:hover:before {
-  opacity: 1;
+  visibility: visible;
   left: 0;
-  transform: scaleX(0.8);
+  transform: scaleX(0.5);
 }
 
 /* COMPANY INFO */
@@ -94,6 +95,8 @@ p.dotted {
   background: #ffe5c7;
   padding-bottom: 10%;
   color: var(--greyTxt);
+  display: flex;
+  justify-content: center;
 }
 .burger-box {
   width: 250px;
@@ -106,7 +109,8 @@ p.dotted {
   font-size: 28px;
   margin-top: 4px;
   margin-bottom: 0;
-  color: #133350;
+  color: var(--lettuce);
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.15);
   opacity: 0.1;
   animation-name: burger-box-h1;
   animation-duration: 5s;
@@ -116,6 +120,7 @@ p.dotted {
 .burger-box ul {
   padding-top: 0.3rem;
   margin-bottom: 0.5rem;
+  margin-left: -8px;
 }
 
 /* BURGER BOX H1 ANIMATION */
@@ -191,7 +196,7 @@ p.dotted {
 
 /* OPEN 24 SECTION */
 #open-24 {
-  background-color: #f3f4f7;
+  background-color: var(--offWhite);
   color: var(--tomatoRed);  
   text-align: center;
   font-size: 18px; 
@@ -211,12 +216,11 @@ p.dotted {
   color: var(--greyTxt);
 }
 .coupon {
-  background-color: #f3f4f7;
-  color: #34a62f;
+  background-color: var(--offWhite);
   border-radius: 5px;  
   padding: 1px 10px 1px 10px;
   font-size: 150%;
-  border: 2px dashed #34a62f;
+  border: 2px dashed var(--lettuce);
   font-size: 15px;
   text-align: center;  
 }
@@ -240,13 +244,13 @@ p.dotted {
 
 /* CONTACT AREA STYLES */
 .contact {
-  background: #f9feff;
+  background: var(--offWhite);
 }
 .contact h1 {
   text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.15);
 }
 .contact p a {
-  color: #000;
+  color: var(--primeColor);
   border-bottom: 5px solid #f08e4a;
   text-decoration: none;
 }
@@ -267,10 +271,10 @@ textarea {
   margin-top: -20px;
   width: 100%;
   padding: 1em;
-  border: 1px solid #4679a6;
+  border: 1px solid var(--primeColor);
 }
 button {
-  background: #136ebe;
+  background: var(--primeColor);
   text-transform: uppercase;
   color: white;
   font-size: 1.1em;
@@ -282,7 +286,7 @@ button {
 }
 button:hover,
 .contact button:focus {
-  background: #4a9bec;
+  background: #666666;
   color: #fff;
   outline: 0;
   transition: background-color 2s ease-out;
@@ -300,7 +304,7 @@ button:hover,
 
 /* FOOTER */
 .footer {
-  background: #385b79;
+  background: var(--bunLight);
   color: #fff; 
   grid-row-start: 2;
   grid-row-end: 3;
@@ -335,6 +339,7 @@ button:hover,
   #company-info ul {
     padding: 10px 0 0 20px;
     font-size: 13px;
+    margin-left: 0;
   }
   .burger-box {
     /* padding-right: 45px; */

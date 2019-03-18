@@ -9,7 +9,13 @@
     }).done(function(data) {
       $.each(data.hamburgers, function(key, val) {
         $('.info-menu').append(
-          '<p class="dotted">' + val.name + ' ' + '|' + ' ' + val.description + '</p>'
+          '<p class="dotted">' +
+            val.name +
+            ' ' +
+            '•' +
+            ' ' +
+            val.description +
+            '</p>'
         );
       }) // end each
     }) // end ajax
